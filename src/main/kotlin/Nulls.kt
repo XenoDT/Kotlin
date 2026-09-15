@@ -1,6 +1,6 @@
 package org.ies.tierno
 
-class Nuuuuuuuuuuullssss {
+class Nulls {
     fun getOrZero(a:Int?): Int? = a ?: 0
     fun printName(nombre: String?){
         nombre.let { println((nombre)) }

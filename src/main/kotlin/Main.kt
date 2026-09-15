@@ -1,12 +1,17 @@
 package org.ies.tierno
 
+import org.ies.tierno.model.Autor
+import org.ies.tierno.model.Book
+import org.ies.tierno.model.Library
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main(args: Array<String>) {
     var colect = Colleccioneeeeeees()
-    var nuull = Nuuuuuuuuuuullssss()
+    var nuull = Nulls()
     colect.createList()
     nuull.getOrZero(2)
+//    extracted1()
 }
 
 private fun extracted1() {

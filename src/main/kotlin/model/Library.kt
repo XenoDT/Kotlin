@@ -1,13 +1,11 @@
-package org.ies.tierno
-
-import com.sun.org.apache.xpath.internal.operations.Bool
-import javax.swing.Box
+package org.ies.tierno.model
 
 data class Library(
     var nombre: String,
     var libros: List<Book>
 ) {
-    fun hasBook(isbn: String): Boolean{
+    fun hasBook(isbn: String): Boolean
+    {
         for (libro in libros){
             if (libro.isbn == isbn){
                 return true

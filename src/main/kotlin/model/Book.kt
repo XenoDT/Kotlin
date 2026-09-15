@@ -1,4 +1,6 @@
-package org.ies.tierno
+package org.ies.tierno.model
+
+import jdk.internal.agent.resources.agent
 
 data class Book(
     val isbn: String,

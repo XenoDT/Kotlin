@@ -1,4 +1,4 @@
-package org.ies.tierno
+package org.ies.tierno.model
 
 data class Student(
     val name: String,
