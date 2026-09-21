@@ -3,18 +3,18 @@ package org.ies.tierno
 import org.ies.tierno.model.Student
 
 class Colleccioneeeeeees {
-    fun createList(): List<String>{
-        var a = mutableListOf<String>()
-        a.add("As")
-        a.add("A41")
-        a.add("Aads")
-        a.add("Ajfp")
-        a.add("asfs")
-        for (ac in a){
-            println(ac)
-        }
-        return a
-    }
+//    fun createList(): List<String>{
+//        var a = mutableListOf<String>()
+//        a.add("As")
+//        a.add("A41")
+//        a.add("Aads")
+//        a.add("Ajfp")
+//        a.add("asfs")
+//        for (ac in a){
+//            println(ac)
+//        }
+//        return a
+//    }
     fun findFirstOne(a: List<String>): String = a.first()
     fun findLastOne(a: List<String>): String= a.last()
 
@@ -28,11 +28,12 @@ class Colleccioneeeeeees {
         .map { n -> n }
     fun suma(numbers: List<Double>): Double = numbers.reduce { acc, d -> acc + d }
 
-    fun avg(numbres: List<Double>): Double? = if (numbres.isEmpty()) null else numbres.average()
+    fun avg(numbres: List<Double>): Double = numbres.let { numbres.average() }
+        //if (numbres.isEmpty()) null else numbres.average()
 
-    fun max(numbers: List<Double>): Double? =  numbers.max()
+    fun max(numbers: List<Double>): Double =  numbers.max()
 
-    fun min(numbers: List<Double>): Double? =  numbers.min()
+    fun min(numbers: List<Double>): Double =  numbers.min()
 
     fun junction(numbers1: List<Double> , numbers2: List<Double>): List<Double> = numbers1.intersect(numbers2).toList()
 
