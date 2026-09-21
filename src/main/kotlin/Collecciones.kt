@@ -26,33 +26,20 @@ class Colleccioneeeeeees {
 
     fun evenNumber(numbers: List<Int>): List<Int> = numbers.filter { n -> n / 2 == 0 }
         .map { n -> n }
-    fun suma(numbers: List<Double>): Double{
-        if (numbers.isEmpty()){
-            return 0.0
-        }
-        var sum = 0.0
-        for (n in numbers){
-            sum += n
-        }
-        return numbers.sum()
-    }
+    fun suma(numbers: List<Double>): Double = numbers.reduce { acc, d -> acc + d }
+
     fun avg(numbres: List<Double>): Double? = if (numbres.isEmpty()) null else numbres.average()
 
-    fun max(numbers: List<Double>): Double? = return numbers.max()
+    fun max(numbers: List<Double>): Double? =  numbers.max()
 
-    fun min(numbers: List<Double>): Double? = return numbers.min()
+    fun min(numbers: List<Double>): Double? =  numbers.min()
 
     fun junction(numbers1: List<Double> , numbers2: List<Double>): List<Double> = numbers1.intersect(numbers2).toList()
 
     fun preciodePedidos(orders: List<Order>): List<Double> = orders.map { order -> order.price }
 
-    fun precioTotal(orders: List<Order>): Double{
-        var sum = 0.0
-        for (o in orders){
-            sum += o.price
-        }
-        return sum
-    }
+    fun precioTotal(orders: List<Order>): Double = orders.map { order -> order.price }.reduce { acc, d -> acc + d }
+
     fun getItems(orders: List<Order>): List<OrderItem> = orders.flatMap { order -> order.items }
 
 }
