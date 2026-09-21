@@ -15,6 +15,9 @@ class Colleccioneeeeeees {
 //        }
 //        return a
 //    }
+    fun createAndPrintList() {
+        listOf("As", "A41", "Aads", "Ajfp", "asfs").forEach { println(it) }
+    }
     fun findFirstOne(a: List<String>): String = a.first()
     fun findLastOne(a: List<String>): String= a.last()
 
