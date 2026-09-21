@@ -1,42 +1,15 @@
 package org.ies.tierno.model
 
-data class Library(
-    var nombre: String,
-    var libros: List<Book>
-) {
-    fun hasBook(isbn: String): Boolean
-    {
-        for (libro in libros){
-            if (libro.isbn == isbn){
-                return true
-            }
-        }
-        return false
-    }
-    fun hasAuthor(nif: String): Boolean{
-        for(libro in libros){
-            if (libro.hasAuthor(nif)){
-                return true
-            }
-        }
-        return false
-    }
-    fun countBooks(nif: String): Int{
-        var count = 0
-        for (l in libros){
-            if (l.hasAuthor(nif)){
-                count++
-            }
-        }
-        return count
-    }
-    fun countYearBooks(year :Int):Int{
-        var count = 0
-        for(l in libros){
-            if (l.year == year){
-                count++
-            }
-        }
-        return count
-    }
+data class Library(var nombre: String,var libros: List<Book>) {
+    fun hasBook(isbn: String): Boolean = libros.any {libro -> libro.isbn == isbn}
+
+    fun hasAuthor(nif: String): Boolean = libros.any { libro -> libro.hasAuthor(nif)}
+    fun countBooks(nif: String): Int = libros.count()
+    fun countYearBooks(year :Int):Int = libros.count{  libro -> libro.year == year}
 }
+data class Book(val isbn: String,val titulo: String,var year: Int,var autores: Set<Autor>) {
+    fun hasAuthor(nif: String): Boolean =
+        autores.any {autor -> autor.nif == nif }
+}
+
+data class Autor(var nif: String,var nombre: String,var apellidos: String) {}
