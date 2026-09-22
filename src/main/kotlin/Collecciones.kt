@@ -19,6 +19,7 @@ class Colleccioneeeeeees {
         listOf("As", "A41", "Aads", "Ajfp", "asfs").forEach { println(it) }
     }
     fun findFirstOne(a: List<String>): String = a.first()
+
     fun findLastOne(a: List<String>): String= a.last()
 
     fun sum10(a: List<Int>): List<Int> = a.map { b -> b + 10}

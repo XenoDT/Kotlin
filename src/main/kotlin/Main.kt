@@ -9,7 +9,7 @@ import org.ies.tierno.model.Book
 fun main(args: Array<String>) {
     var colect = Colleccioneeeeeees()
     var nuull = Nulls()
-    colect.createList()
+//    colect.createList()
     nuull.getOrZero(2)
 //    extracted1()
 }
