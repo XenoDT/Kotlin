@@ -36,8 +36,9 @@ class Colleccioneeeeeees {
     fun evenNumber(numbers: List<Int>): List<Int> =
         numbers.filter { n -> n / 2 == 0 }.map { n -> n }
 
-    fun suma(numbers: List<Double>): Double =
-        numbers.reduce { acc, d -> acc + d }
+//    fun suma(numbers: List<Double>): Double? =
+//        numbers.reduce { acc, d -> acc + d }
+    fun suma(numbers: List<Double>): Double = numbers.fold (0.0) { a, b -> a + b}
 
 //    fun avg(numbres: List<Double>): Double? =
 //        numbres.let { numbres.average() }

@@ -10,7 +10,18 @@ fun main(args: Array<String>) {
     var colect = Colleccioneeeeeees()
     var nuull = Nulls()
 //    colect.createList()
+    val a = listOf<Int>(43534,2,3,4)
+    val a2 = listOf<Double>(2.0,3.0,3.0,2.0)
+    val aNull = listOf<Double>()
+    val aNull2 = listOf<Int>()
     nuull.getOrZero(2)
+    val b = nuull.getLength("Pepe")
+    nuull.printName("Pepe")
+    val c = nuull.nullOrfirst(aNull2)
+    println(b)
+    println(c)
+    val d = nuull.avg(aNull)
+    println(d)
 //    extracted1()
 }
 
