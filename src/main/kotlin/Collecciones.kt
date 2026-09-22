@@ -1,6 +1,5 @@
 package org.ies.tierno
 
-import org.ies.tierno.model.Student
 
 class Colleccioneeeeeees {
 //    fun createList(): List<String>{
@@ -63,5 +62,6 @@ class Colleccioneeeeeees {
         orders.flatMap { order -> order.items }
 
 }
+data class Student(val name: String,val surname: String,val email: String,val zipCode: Int)
 data class Order(val id: Int, val price: Double, val items: List<OrderItem>)
 data class OrderItem(val itemId: Int, val price: Double)
